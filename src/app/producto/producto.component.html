@@ -1,0 +1,6 @@
+<h1>Productos</h1>
+<div *ngFor="let products of product">
+  <p>{{products.nombre}}</p>
+  <button [class.selected]="products === selectedProducto" type="button" (click)="onSelect(products)" class=""></button>
+</div>
+<app-producto-detalles [products]="selectedProducto"></app-producto-detalles>

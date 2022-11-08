@@ -1,0 +1,6 @@
+<h1>Proveedores</h1>
+<div *ngFor="let prov of proveedor">
+  <p>{{prov.nombre}}</p>
+  <button [class.selected]="prov === selectedProveedores" type="button" (click)="onSelect(prov)" class=""></button>
+</div>
+<app-proveedores-detalles [proveedores]="selectedProveedores"></app-proveedores-detalles>
