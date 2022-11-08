@@ -1,6 +1,20 @@
-<h1>Productos</h1>
-<div *ngFor="let products of product">
-  <p>{{products.nombre}}</p>
-  <button [class.selected]="products === selectedProducto" type="button" (click)="onSelect(products)" class=""></button>
+<div class="back-row">
+  <div class="back">
+    <h1>Productos</h1>
+    <div *ngFor="let products of product">
+      <button
+        [class.selected]="products === selectedProducto"
+        type="button"
+        (click)="onSelect(products)"
+        class=""
+      >
+        {{ products.nombre }}
+      </button>
+    </div>
+  </div>
+  <div class="detallesProductos">
+    <app-producto-detalles
+      [products]="selectedProducto"
+    ></app-producto-detalles>
+  </div>
 </div>
-<app-producto-detalles [products]="selectedProducto"></app-producto-detalles>

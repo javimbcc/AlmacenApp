@@ -1,6 +1,19 @@
-<h1>Proveedores</h1>
-<div *ngFor="let prov of proveedor">
-  <p>{{prov.nombre}}</p>
-  <button [class.selected]="prov === selectedProveedores" type="button" (click)="onSelect(prov)" class=""></button>
+<div class="back-row">
+  <div class="back">
+    <h1>Proveedores</h1>
+    <div *ngFor="let prov of proveedor">
+      <p>{{ prov.nombre }}</p>
+      <button
+        [class.selected]="prov === selectedProveedores"
+        type="button"
+        (click)="onSelect(prov)"
+        class=""
+      ></button>
+    </div>
+  </div>
+  <div class="detallesProductos">
+    <app-proveedores-detalles
+      [proveedores]="selectedProveedores"
+    ></app-proveedores-detalles>
+  </div>
 </div>
-<app-proveedores-detalles [proveedores]="selectedProveedores"></app-proveedores-detalles>

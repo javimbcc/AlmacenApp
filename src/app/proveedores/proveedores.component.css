@@ -1,0 +1,13 @@
+
+.back-row {
+  padding: 16px;
+  margin: 16px;
+  display: flex;
+  flex-direction: row;
+}
+
+.detallesProductos {
+  display: flex;
+  margin-top: 16px;
+  padding-top: 64px;
+}

@@ -1,0 +1,14 @@
+a {
+  padding: 16px;
+  background-color: grey;
+  color: white;
+  text-decoration: none;
+  border-radius: 16px;
+  margin: 16px;
+  margin-top: 16px;
+  width: 80px;
+}
+
+.back {
+  padding: 16px;
+}
